@@ -39,7 +39,7 @@ required. They should be available in any package manager.
 from tarball:
 ```bash
 cd motrix-0.1
-./configure && make
+CXXFLAGS="-O2 -DNDEBUG" ./configure && make
 ```
 
 from git repo:
@@ -47,7 +47,7 @@ from git repo:
 cd motrix
 autoreconf -i
 mkdir build && cd build
-../configure && make
+CXXFLAGS="-O2 -DNDEBUG" ../configure && make
 ```
 
 ## Running
