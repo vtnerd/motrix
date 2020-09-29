@@ -64,6 +64,15 @@ The motrix executable can then be started:
 The daemon does not yet support Unix IPC for ZeroMQ RPC. Testnet RPC port
 defaults to 28082 instead of 18081
 
+### Docker
+
+A Dockerfile has been provided for those who may run their nodes or tools using Docker containers. Be sure to utilize `host` networking so that you can reach remote nodes.
+
+```
+docker build -t motrix .
+docker run --rm -it --net=host motrix tcp://127.0.0.1:18081 tcp://127.0.0.1:18082 auto
+```
+
 ### Color Scheme
 
 Motrix will auto-detect the number of colors available on your terminal. If
