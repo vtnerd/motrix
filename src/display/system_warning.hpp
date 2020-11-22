@@ -29,6 +29,8 @@
 #ifndef MOTRIX_DISPLAY_SYSTEM_WARNING_HPP
 #define MOTRIX_DISPLAY_SYSTEM_WARNING_HPP
 
+#include <stdexcept>
+
 #include "display/window.hpp"
 #include "monero_data.hpp"
 
