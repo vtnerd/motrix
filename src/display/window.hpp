@@ -31,6 +31,7 @@
 
 #include <memory>
 #include <ncurses.h>
+#include <stdexcept>
 
 #include "display/colors.hpp"
 
