@@ -86,7 +86,7 @@ namespace
   constexpr const std::size_t max_block_hash_buffer = 50;
 
   //! Delay when showing new block "system warning"
-  constexpr const std::chrono::seconds block_display_time{8};
+  constexpr const std::chrono::seconds block_display_time{16};
 
   //! ZMQ_REQ socket temporarily closed if daemon this many blocks behind
   constexpr const std::uint64_t big_sync_interval = 5000;
