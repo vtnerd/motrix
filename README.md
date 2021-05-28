@@ -37,7 +37,7 @@ required. They should be available in any package manager.
 
 from tarball:
 ```bash
-cd motrix-0.1
+cd motrix-0.1.1
 CXXFLAGS="-O2 -DNDEBUG" ./configure && make
 ```
 
