@@ -35,27 +35,15 @@
 
 namespace display
 {
-
-  system_warning::system_warning(const monero::hash& id, const std::uint64_t height, const std::size_t tx_count)
-    : win_(make_center_box(characters{80}, characters{5}, kInfoText))
+  system_warning::system_warning(const monero::hash&, const std::uint64_t, const std::size_t)
+    : win_(make_center_box(characters{16}, characters{3}, kInfoText))
   {
-    static constexpr const char header[] = "SYSTEM FAILURE";
-    static constexpr const char txes_msg[] = "%u transaction(s) processed by Monero";
-    static constexpr const char height_msg[] = "Case Number: %u";
-    static constexpr const char id_msg[] = "Reference ID: %s";
-
+    static constexpr const char message[] = "SYSTEM FAILURE";
     if (!win_)
       throw std::runtime_error{"Failed to create new curses window"};
 
-    const auto hex = to_hex::array(id);
-
-    std::array<char, 65> hack;
-    std::copy(hex.begin(), hex.end(), hack.begin());
-    hack[64] = 0;
-          
-    print_center(handle(), characters{static_length(header)}, 0, header);
-    print_center(handle(), characters{static_length(txes_msg)}, 1, txes_msg, unsigned(tx_count));
-    print_center(handle(), characters{static_length(height_msg) - 2 + 6}, 2, height_msg, unsigned(height));
-    print_center(handle(), characters{static_length(id_msg) - 2 + 64}, 3, id_msg, hack.data());
+    wattron(handle(), COLOR_PAIR(display::kFallingText1));
+    print_center(handle(), characters{static_length(message)}, 1, message);
+    wattron(handle(), COLOR_PAIR(display::kFallingText1));
   }
 }
