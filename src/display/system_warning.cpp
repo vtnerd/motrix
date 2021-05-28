@@ -44,6 +44,6 @@ namespace display
 
     wattron(handle(), COLOR_PAIR(display::kFallingText1));
     print_center(handle(), characters{static_length(message)}, 1, message);
-    wattron(handle(), COLOR_PAIR(display::kFallingText1));
+    wattroff(handle(), COLOR_PAIR(display::kFallingText1));
   }
 }
