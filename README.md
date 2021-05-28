@@ -5,7 +5,7 @@
 
 Watch real-value exchanges just like our ancestors did - in Matrix terminals.
 
-![macOS standard color scheme](https://raw.githubusercontent.com/vtnerd/motrix/screencaps-0.2/macos-standard-720p.gif)
+![macOS standard color scheme](https://raw.githubusercontent.com/vtnerd/motrix/screencaps-0.1.1/macos-standard-720p.gif)
 
 # About
 
