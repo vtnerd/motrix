@@ -34,6 +34,7 @@
 #include <cstddef>
 #include <ncurses.h>
 #include <random>
+#include <stdexcept>
 
 #include "display/window.hpp"
 
