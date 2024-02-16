@@ -30,6 +30,7 @@
 
 #include <algorithm>
 #include <random>
+#include <stdexcept>
 
 #include "display/colors.hpp"
 

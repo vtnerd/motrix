@@ -29,6 +29,7 @@
 #include "system_warning.hpp"
 
 #include <array>
+#include <stdexcept>
 
 #include "display/string.hpp"
 #include "hex.hpp"
