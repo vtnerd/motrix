@@ -402,7 +402,7 @@ namespace
         const bool gap = (state.last_block_id != minimal_block.first_prev_id);
         state.last_block_id = minimal_block.ids.back();
         minimal_block_prev = minimal_block.ids.size() == 1 ?
-          minimal_block.first_prev_id : minimal_block.ids[minimal_block.ids.size()];
+          minimal_block.first_prev_id : minimal_block.ids.at(minimal_block.ids.size() - 2);
 
         if (gap)
           sync_mempool(state, txpool);
